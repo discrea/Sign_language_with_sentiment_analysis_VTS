@@ -1,0 +1,123 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width">
+    <!--    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <title>핸들랭(Handlang) 수화 교육 프로젝트 🍩</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: 'NanumSquare', sans-serif !important;;
+        }
+    </style>
+</head>
+
+<body onkeypress="return keyPress(event)">
+    <!-- 네비게이션바 -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">핸들랭(Handlang)👋</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('charstudy')}}">지문자 연습</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('quiz')}}">지문자 퀴즈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('numstudy')}}">숫자 연습</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--    grid-->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-6">
+            <!--          ASL image-->
+            <img style="width:100%; height:auto; margin-top: 10%" src="/static/images/A_2019-02-26-100450%20resized.jpg">
+            <!--            img Label-->
+            <br><br><br>
+            <p style=" width:100%; height: 30%; font-size: 400%; text-align: center;">Aa</p>
+        </div>
+
+          <!--          webcam -->
+        <div class="col-sm-6">
+            <img style="margin-top: 10%; width:100%; height:60%" id="video" src="{{ url_for('video_feed') }}">
+            <div id="predict" style="text-align: center; ">
+                <br>🤔 현재 predict label 🤔<br>
+                예측을 시작하려면 Enter키↩️ 를 눌러주세요.
+                <div id="predict-in"
+                     style="margin-top: 10px; line-height: 1.4em; border:1px dashed steelblue; font-size: 400%; text-align: center;">
+                    Not Started.
+                </div>
+            </div>
+        </div>
+      </div>
+
+          <!--          경계선-->
+        <hr style="border: 0; height: 3px; background: #ccc;">
+
+      <div class="row">
+        <div class="col-sm-6">
+            <!--            알파벳 선택하기 버튼-->
+            <div class="btn btn-primary btn-block p-3" href="{{ url_for('selectChar') }}"> 지문자 선택하러 가기</div>
+        </div>
+
+        <div class="col-sm-6">
+
+            <!--          ok 싸인 by 지영언니-->
+
+            <table class="table table-sm table-bordered table-warning text-center">
+                <thead>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                </thead>
+            </table>
+        <a style="float: right;" href="#" title="다음"> <i class="fa fa-arrow-circle-right" style="font-size:60px"></i></a>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!--다음 알파벳으로-->
+
+      <hr>
+
+      <footer>
+        <p style="text-align: center;">&copy; 핸들랭(Handlang)</p>
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

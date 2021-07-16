@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 부트스트랩 사용 위한 코드  https://getbootstrap.com/docs/4.4/getting-started/introduction/-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<title>Handlang</title>
+
+	<style>
+		/*section 부분이랑 header, footer 부분을 구분하기 위해 section 부분만 폭 조정*/
+		section {
+			margin-top:5%;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<!-- Image and text -->
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="#">
+			<!-- <img src="" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+		     👋 Handlang
+		 	</a>
+
+			<ul class="nav justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">지문자연습</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">숫자연습</a> <!-- 일단 작동안하게 -->
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" tabindex="-1" aria-disabled="true">퀴즈</a>
+				</li>
+			</ul>
+		</nav>
+			
+	</header>
+	<section id="intro">
+		<!-- https://getbootstrap.com/docs/4.4/components/jumbotron/  중 Fluid jumbotron-->
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-5">지문자연습 플랫폼 핸들랭</h1>
+				<p class="lead">본 프로젝트는...</p>
+			</div>
+		</div>
+	</section>
+	
+	<section id="service">
+		<!-- https://getbootstrap.com/docs/4.4/components/card/ 중 Header and footer -->
+
+		<div class="card-deck mb-3 text-center"> <!-- 3개 card 를 row로 놓기 위해 card-deck 속성 사용 -->
+			<div class="col-sm d-flex"> 
+				<div class="card flex-fill" style="width: 18rem;">
+					<div class="card-header">
+						알파벳 Aa, Bb, Cc ...
+					</div>
+					<div class="card-body">
+						<img src="./static/img/asl_img.jpg" class="card-img-top" />
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-primary" id="btn_digit">바로가기</a>
+					</div>
+				</div>
+
+				<div class="card flex-fill" style="width: 18rem;">
+					<div class="card-header">
+						숫자 1, 2, 3 ...
+					</div>
+					<div class="card-body">
+						<img src="./static/img/digit_img.png"class="card-img-top"/>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-primary disabled" id="btn_digit">바로가기</a>
+					</div>
+				</div>
+
+				<div class="card flex-fill" style="width: 18rem;">
+					<div class="card-header">
+						퀴즈!
+					</div>
+					<div class="card-body">
+						<img src="./static/img/quiz_img.jpg"class="card-img-top"/>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-primary" id="btn_digit">바로가기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer mt-auto py-4 bg-light">
+		<div class="container">
+			<span class="text-muted float-right">&copy; 2020 Handlang</span>
+		</div>
+	</footer>
+
+	<!-- 부트스트랩 사용 위한 코드  https://getbootstrap.com/docs/4.4/getting-started/introduction/-->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
