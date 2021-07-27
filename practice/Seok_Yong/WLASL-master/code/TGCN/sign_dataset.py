@@ -42,7 +42,7 @@ def read_pose_file(filepath):
     frame_id = path_parts[1][:11]
     vid = os.path.split(path_parts[0])[-1]
 
-    save_to = os.path.join('/home/dxli/workspace/nslt/code/Pose-GCN/posegcn/features', vid)
+    save_to = os.path.join('/Users/san/work/python/Deep_Learning/Sign_language_with_sentiment_analysis_VTS/practice/Seok_Yong/WLASL-master/code/TGCN/pose/features', vid)
 
     try:
         ft = torch.load(os.path.join(save_to, frame_id + '_ft.pt'))
@@ -86,7 +86,7 @@ def read_pose_file(filepath):
         frame_id = path_parts[1][:11]
         vid = os.path.split(path_parts[0])[-1]
 
-        save_to = os.path.join('code/Pose-GCN/posegcn/features', vid)
+        save_to = os.path.join('/Users/san/work/python/Deep_Learning/Sign_language_with_sentiment_analysis_VTS/practice/Seok_Yong/WLASL-master/code/TGCN/pose/features', vid)
         if not os.path.exists(save_to):
             os.mkdir(save_to)
         torch.save(ft, os.path.join(save_to, frame_id + '_ft.pt'))

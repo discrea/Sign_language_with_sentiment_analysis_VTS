@@ -88,8 +88,8 @@ def compute_top_n_accuracy(truths, preds, n):
 if __name__ == '__main__':
 
     # change root and subset accordingly.
-    root = '/media/anudisk/github/WLASL'
-    trained_on = 'asl2000'
+    root = '/Users/san/work/python/Deep_Learning/Sign_language_with_sentiment_analysis_VTS/practice/Seok_Yong/WLASL-master'
+    trained_on = 'data/asl2000'
 
     checkpoint = 'ckpt.pth'
 

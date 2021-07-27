@@ -17,7 +17,7 @@ def train(log_interval, model, train_loader, optimizer, epoch):
     for batch_idx, data in enumerate(train_loader):
         X, y, video_ids = data
         # distribute data to device
-        X, y = X.cuda(), y.cuda().view(-1, )
+        X, y = X, y.view(-1, )
 
         N_count += X.size(0)
 
@@ -78,7 +78,7 @@ def validation(model, test_loader, epoch, save_to):
         for batch_idx, data in enumerate(test_loader):
             # distribute data to device
             X, y, video_ids = data
-            X, y = X.cuda(), y.cuda().view(-1, )
+            X, y = X, y.view(-1, )
 
             all_output = []
 

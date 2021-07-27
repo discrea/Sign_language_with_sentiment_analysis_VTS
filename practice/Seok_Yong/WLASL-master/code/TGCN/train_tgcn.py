@@ -42,7 +42,7 @@ def run(split_file, pose_data_root, configs, save_model_to=None):
 
     # setup the model
     model = GCN_muti_att(input_feature=num_samples*2, hidden_feature=num_samples*2,
-                         num_class=len(train_dataset.label_encoder.classes_), p_dropout=drop_p, num_stage=num_stages).cuda()
+                         num_class=len(train_dataset.label_encoder.classes_), p_dropout=drop_p, num_stage=num_stages)
 
     # setup training parameters, learning rate, optimizer, scheduler
     lr = configs.init_lr
@@ -96,7 +96,7 @@ def run(split_file, pose_data_root, configs, save_model_to=None):
             best_test_acc = val_score[0]
             best_epoch_num = epoch
 
-            torch.save(model.state_dict(), os.path.join('checkpoints', subset, 'gcn_epoch={}_val_acc={}.pth'.format(
+            torch.save(model.state_dict(), os.path.join('checkpoints', subset, 'gcn_epoch_{}_val_acc_{}.pth'.format(
                 best_epoch_num, best_test_acc)))
 
     utils.plot_curves()
@@ -108,9 +108,9 @@ def run(split_file, pose_data_root, configs, save_model_to=None):
 
 
 if __name__ == "__main__":
-    root = '/media/anudisk/github/WLASL'
+    root = '/Users/san/work/python/Deep_Learning/Sign_language_with_sentiment_analysis_VTS/practice/Seok_Yong/WLASL-master'
 
-    subset = 'asl100'
+    subset = 'asl2000'
 
     split_file = os.path.join(root, 'data/splits/{}.json'.format(subset))
     pose_data_root = os.path.join(root, 'data/pose_per_individual_videos')
